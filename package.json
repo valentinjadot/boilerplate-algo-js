@@ -1,10 +1,21 @@
 {
   "type": "module",
+  "license": "MIT",
   "scripts": {
     "start": "node src/index.js",
-    "watch": "run-when-changed --watch 'src/**' --exec 'yarn run start'"
+    "format:fix": "prettier src/*",
+    "watch": "run-when-changed --watch 'src/**' --exec 'yarn run format:fix && yarn run start'"
   },
   "devDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.2",
     "run-when-changed": "^2.1.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
